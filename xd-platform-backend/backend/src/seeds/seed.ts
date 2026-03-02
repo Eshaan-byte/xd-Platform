@@ -116,7 +116,7 @@ async function fetchRawgScreenshots(gameId: number) {
   const url = `https://api.rawg.io/api/games/${gameId}/screenshots?key=${RAWG_API_KEY}&page_size=5`;
   const res = await fetch(url);
   if (!res.ok) return [];
-  const data = await res.json();
+  const data: any = await res.json();
   return (data.results || []).map((s: any) => s.image as string);
 }
 
@@ -126,7 +126,7 @@ async function fetchCheapSharkPrice(title: string): Promise<{ price: string; ori
     const url = `https://www.cheapshark.com/api/1.0/games?title=${encodeURIComponent(title)}&limit=1&exact=0`;
     const res = await fetch(url);
     if (!res.ok) return null;
-    const data = await res.json();
+    const data: any = await res.json();
     if (!data || data.length === 0) return null;
     const game = data[0];
     const cheapest = parseFloat(game.cheapest);

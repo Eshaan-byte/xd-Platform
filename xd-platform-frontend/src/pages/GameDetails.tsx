@@ -71,7 +71,7 @@ const GameDetails: React.FC = () => {
           </div>
 
           <div className="grid grid-cols-5 gap-3">
-            {(game.gallery?.length ? game.gallery : [game.cover]).map((src, i) => (
+            {(game.gallery?.length ? game.gallery : [game.cover]).map((src: string, i: number) => (
               <button
                 key={i}
                 onClick={() => setActive(src)}
@@ -114,7 +114,7 @@ const GameDetails: React.FC = () => {
 
           {game.platforms && (
             <div className="flex flex-wrap gap-2 pt-1">
-              {game.platforms.map((p) => (
+              {game.platforms.map((p: string) => (
                 <span key={p} className="rounded-sm bg-[#0f0f0f] px-2 py-1 text-[10px] tracking-wide text-gray-200 ring-1 ring-white/10">
                   {p}
                 </span>
@@ -174,7 +174,7 @@ const GameDetails: React.FC = () => {
         </h2>
 
         <div className="space-y-3">
-        {game.reviews.map((r, i) => (
+        {game.reviews.map((r: any, i: number) => (
             <ReviewItem
             key={i}
             user={r.user}

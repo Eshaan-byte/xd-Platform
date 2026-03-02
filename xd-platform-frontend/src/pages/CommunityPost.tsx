@@ -77,7 +77,7 @@ const CommunityPost: React.FC = () => {
 
           {/* Body */}
           <div className="prose prose-invert max-w-none prose-p:text-gray-300">
-            {post.content.map((p, idx) => (
+            {post.content.map((p: string, idx: number) => (
               <p key={idx} className="mt-5 text-sm leading-6">{p}</p>
             ))}
           </div>
@@ -111,7 +111,7 @@ const CommunityPost: React.FC = () => {
               </div>
 
               <div className="grid gap-6 md:grid-cols-2">
-                {post.more.map((m) => (
+                {post.more.map((m: any) => (
                   <Link to={`/community/${m.slug}`} key={m.slug} className="group">
                     <article className="overflow-hidden rounded-xl bg-[#141414] ring-1 ring-white/5 transition group-hover:ring-white/20">
                       <div className="p-4 sm:p-5">
