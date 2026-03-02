@@ -1,0 +1,29 @@
+{
+  "name": "xd-platform",
+  "version": "1.0.0",
+  "description": "XD Platform - Monorepo",
+  "private": true,
+  "scripts": {
+    "backend:dev": "pnpm --filter backend dev",
+    "backend:build": "pnpm --filter backend build",
+    "backend:start": "pnpm --filter backend start",
+    "website:dev": "pnpm --filter website dev",
+    "website:build": "pnpm --filter website build",
+    "website:start": "pnpm --filter website start",
+    "admin:dev": "pnpm --filter admin dev",
+    "admin:build": "pnpm --filter admin build",
+    "admin:preview": "pnpm --filter admin preview",
+    "install:all": "pnpm install"
+  },
+  "keywords": [
+    "game-distribution",
+    "monorepo",
+    "typescript",
+    "express",
+    "nextjs",
+    "react"
+  ],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.13.1"
+}
